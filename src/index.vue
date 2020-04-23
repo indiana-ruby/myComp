@@ -1,6 +1,6 @@
 <template>
   <div class="comp">
-    comp！！！
+    {{name}}{{age}}
   </div>
 </template>
 
@@ -21,6 +21,20 @@
     data() {
       return {
         showApp: true
+      }
+    },
+    props: {
+      name: {
+        type: String,
+        default: function () {
+          return 'lc'
+        }
+      },
+      age: {
+        type: String,
+        default: function () {
+          return '22'
+        }
       }
     },
     created() {
