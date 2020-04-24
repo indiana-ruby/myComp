@@ -1,6 +1,9 @@
 <template>
   <div class="comp">
     {{name}}{{age}}
+    <slot name="slot-test">
+      <div class="load-more">default</div>
+    </slot>
   </div>
 </template>
 
