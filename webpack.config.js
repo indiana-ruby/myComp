@@ -11,11 +11,11 @@ const smp = new SpeedMeasurePlugin();
 
 module.exports = smp.wrap({
     mode: 'production',
-    entry: './src/index.js',
-    // entry: {
-    //     index: path.resolve(__dirname,"./src/index.vue"),
-    //     children: path.resolve(__dirname,"./src/children.vue"),
-    // },
+    // entry: './src/index.js',
+    entry: {
+        comp: path.resolve(__dirname,"./src/comp.vue"),
+        children: path.resolve(__dirname,"./src/children.vue"),
+    },
     output: {
         filename: '[name].[hash].js',
         path: path.resolve(__dirname, 'dist')
