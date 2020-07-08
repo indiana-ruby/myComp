@@ -1,8 +1,3 @@
+import productList from './component/productList.vue'
 
-import comp from './comp.vue'
-import children from './children.vue'
-
-export default {
-  comp,
-  children
-}
+export default productList

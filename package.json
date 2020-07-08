@@ -41,5 +41,15 @@
     "babel-loader": "^8.0.0-beta.0",
     "css-loader": "^3.4.2",
     "style-loader": "^1.1.3"
+  },
+  "ddc": {
+    "ddcType": "component",
+    "ddcBusinessType": "productlist",
+    "ddcLabel": "商品组件",
+    "ddcName": "@ddc/productlist",
+    "author": "cheng.liu",
+    "ddcDescription": "商品组件",
+    "group": "waimai",
+    "bctName": "@gundam-waimai/business-lib"
   }
 }

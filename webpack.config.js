@@ -13,12 +13,17 @@ module.exports = smp.wrap({
     mode: 'production',
     // entry: './src/index.js',
     entry: {
-        comp: path.resolve(__dirname,"./src/comp.vue"),
-        children: path.resolve(__dirname,"./src/children.vue"),
+        productList: path.resolve(__dirname,"./src/index.js"),
+        desc: path.resolve(__dirname,"./src/desc.js"),
+        // comp: path.resolve(__dirname,"./src/comp.vue"),
+        // children: path.resolve(__dirname,"./src/children.vue"),
     },
     output: {
-        filename: '[name].[hash].js',
-        path: path.resolve(__dirname, 'dist')
+        filename: '[name].js',
+        path: path.resolve(__dirname, 'dist'),
+        library: 'productList',
+        libraryTarget: 'umd',
+        libraryExport: 'default',
     },
     resolveLoader: {
         modules: [ 'node_modules' ],
