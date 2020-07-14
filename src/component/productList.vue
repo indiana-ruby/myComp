@@ -1,20 +1,23 @@
 <template>
-  <div class="product-list">
-    <div v-for="item in products" :key="item.id">
-      <productOne :product="item" />
+  <provideList>
+    <div class="product-list" slot-scope="{ handleClick, inView}">
+      <div v-for="item in products" :key="item.id">
+        <productOne :product="item" :handleClick="handleClick" :inView="inView"/>
+      </div>
     </div>
-  </div>
+  </provideList>
 </template>
 
 <script>
   import productOne from './productOne.vue';
-
+  import provideList from './provideList.vue';
   export default {
     name: 'productList',
     computed: {
     },
     components: {
-      productOne
+      productOne,
+      provideList
     },
     data() {
       return {
@@ -43,5 +46,7 @@
 </script>
 
 <style lang="less">
-
+  .product-list {
+    width: 7.5rem;
+  }
 </style>

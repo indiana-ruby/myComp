@@ -33,10 +33,9 @@
           return {}
         }
       },
-      handlers: {
-        type: Object,
+      handleClick: {
+        type: Function,
         default: function () {
-          return {}
         }
       }
     },
@@ -65,10 +64,10 @@
       }
 
       this.priceNum = Number(price);
-      this.isValidPrice = !isNaN(priceNum);
+      this.isValidPrice = !isNaN(this.priceNum);
       this.originPriceNum = Number(origin_price);
-      this.showOriginPrice = (isValidPrice ? priceNum < originPriceNum : true) && originPriceNum > 0;
-      this.originPriceStr = originPriceNum.toFixed(2);
+      this.showOriginPrice = (this.isValidPrice ? this.priceNum < this.originPriceNum : true) && this.originPriceNum > 0;
+      this.originPriceStr = this.originPriceNum.toFixed(2);
       let [p1, p2] = (this.isValidPrice ? this.priceNum.toFixed(2) : price).split('.');
       this.p1 = p1;
       this.p2 = p2;

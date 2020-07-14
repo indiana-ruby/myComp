@@ -4,8 +4,8 @@
   "description": "",
   "main": "./dist/comp",
   "scripts": {
-    "build": "webpack",
-    "server": "webpack-dev-server --config ./webpack.config.js --hot --inline --open"
+    "build": "webpack  --config ./webpack.prd.js",
+    "server": "webpack-dev-server --config ./webpack.dev.js --hot --inline --open"
   },
   "author": "",
   "license": "ISC",
@@ -38,9 +38,11 @@
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "@babel/runtime": "^7.8.4",
+    "axios": "^0.19.2",
     "babel-loader": "^8.0.0-beta.0",
     "css-loader": "^3.4.2",
-    "style-loader": "^1.1.3"
+    "style-loader": "^1.1.3",
+    "webpack-merge": "^5.0.9"
   },
   "ddc": {
     "ddcType": "component",

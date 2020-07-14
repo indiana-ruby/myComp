@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+  
+    <title>Webpack</title>
+    <script>
+      (function flexible(window, document) {
+      var docEl = document.documentElement
+      //  375屏幕的font-size是100，也就是说，iphone6的font-size是100，设计稿按照750px设计，0.01rem = 1px
+      function setRemUnit() {
+        var rem = docEl.clientWidth / 7.5
+        docEl.style.fontSize = rem + 'px'
+      }
+      setRemUnit()
+      // reset rem unit on page resize
+      window.addEventListener('resize', setRemUnit)
+    }(window, document))
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
