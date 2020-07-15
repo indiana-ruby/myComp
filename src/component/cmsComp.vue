@@ -1,9 +1,6 @@
 <template>
   <div class="cms-comp-item" ref="cmsComp">
-    <slot
-      :inView="inView"
-    >
-    </slot>
+    <slot :inView="inView"></slot>
   </div>
 </template>
 

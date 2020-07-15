@@ -51,6 +51,21 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.css$/,
+                use: [
+                {
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                      esModule: true,
+                    },
+                }, {
+                    loader: "css-loader"
+                }],
+                exclude: [
+                    path.resolve(__dirname, "node_modules")
+                ]
+            },
+            {
                 test: /\.less$/,
                 include: [
                     path.resolve(__dirname, 'src'),

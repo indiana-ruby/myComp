@@ -1,27 +1,26 @@
 <template>
-  <provideList>
-    <div class="product-list" slot-scope="{ handleClick, inView}">
+  <cmsComp>
+    <div class="product-list" slot-scope="{inView}">
       <div v-for="item in products" :key="item.id">
         <productOne :product="item" :handleClick="handleClick" :inView="inView"/>
       </div>
     </div>
-  </provideList>
+  </cmsComp>
 </template>
 
 <script>
   import productOne from './productOne.vue';
-  import provideList from './provideList.vue';
+  import cmsComp from './cmsComp.vue';
   export default {
     name: 'productList',
     computed: {
     },
     components: {
       productOne,
-      provideList
+      cmsComp
     },
     data() {
       return {
-        
       }
     },
     props: {

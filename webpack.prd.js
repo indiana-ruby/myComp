@@ -23,7 +23,7 @@ module.exports = smp.wrap(merge(common, {
             cacheGroups: { //设置缓存组用来抽取满足不同规则的chunk,下面以生成common为例
                 vendor: {
                     test: /node_modules/,
-                    chunks: "initial",
+                    chunks: "all",
                     name: "vendor",
                     priority: 10,  //优先级，一个chunk很可能满足多个缓存组，会被抽取到优先级高的缓存组中
                     minChunks: 1,  //最少被几个chunk引用
