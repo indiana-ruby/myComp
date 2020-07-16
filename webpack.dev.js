@@ -1,8 +1,5 @@
 const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
-const smp = new SpeedMeasurePlugin();
-//速度分析
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 

@@ -111,12 +111,4 @@ module.exports = {
         new CleanWebpackPlugin(),
         // new HardSourceWebpackPlugin()
     ],
-    devServer: {
-        contentBase: path.resolve(__dirname, "dist"),
-        compress: true,
-        port: 8080,
-        open: true,
-        hot: true,
-        hotOnly: true
-    }      
 };

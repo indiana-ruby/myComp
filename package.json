@@ -2,7 +2,7 @@
   "name": "mycomp",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/comp",
+  "main": "./src/index.js",
   "scripts": {
     "build": "webpack  --config ./webpack.prd.js",
     "dev": "webpack  --config ./webpack.dev.js",
@@ -51,8 +51,6 @@
     "ddcLabel": "商品组件",
     "ddcName": "@ddc/productlist",
     "author": "cheng.liu",
-    "ddcDescription": "商品组件",
-    "group": "waimai",
-    "bctName": "@gundam-waimai/business-lib"
+    "ddcDescription": "商品组件"
   }
 }
