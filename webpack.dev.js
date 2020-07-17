@@ -5,7 +5,7 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
     mode: 'production',
-    entry: './local/index.js',
+    entry: path.resolve(__dirname, 'local/index.js'),
     devtool: "source-map",
     plugins: [
         new HtmlWebpackPlugin({
